@@ -1,8 +1,8 @@
 <!-- ══════════════════════ IDIOMAS / LANGUAGES ══════════════════════ -->
 <div align="center">
-<a href="README.md"><img src="https://img.shields.io/badge/Português-1987F0?style=for-the-badge" alt="Português"/></a>
+<a href="README.md"><img src="https://img.shields.io/badge/Português-555555?style=for-the-badge" alt="Português"/></a>
 <a href="README.en.md"><img src="https://img.shields.io/badge/English-555555?style=for-the-badge" alt="English"/></a>
-<a href="README.es.md"><img src="https://img.shields.io/badge/Español-555555?style=for-the-badge" alt="Español"/></a>
+<a href="README.es.md"><img src="https://img.shields.io/badge/Español-1987F0?style=for-the-badge" alt="Español"/></a>
 </div>
 
 <!-- ══════════════════════════ BANNER ══════════════════════════ -->
@@ -21,8 +21,8 @@
 <br/>
 
 <h1 align="center">Cyber Range P2P</h1>
-<p align="center"><em>Laboratório de segurança isolado, automatizado e monitorado em tempo real</em></p>
-<p align="center"><strong>Link Ponto a Ponto (P2P) · Montagem Persistente (SSHFS) · Monitoramento com Wazuh</strong></p>
+<p align="center"><em>Laboratorio de seguridad aislado, automatizado y monitorizado en tiempo real</em></p>
+<p align="center"><strong>Enlace Punto a Punto (P2P) · Montaje Persistente (SSHFS) · Monitorización con Wazuh</strong></p>
 
 <div align="center">
 
@@ -40,32 +40,32 @@
 <!-- ══════════════════════════ NAVEGAÇÃO ══════════════════════════ -->
 <div align="center">
 
-<a href="#visao-geral"><img src="https://img.shields.io/badge/▸_VISÃO_GERAL-1987F0?style=for-the-badge" alt="visao"/></a>
-<a href="#beneficios"><img src="https://img.shields.io/badge/▸_BENEFÍCIOS-000000?style=for-the-badge" alt="beneficios"/></a>
-<a href="#arquitetura"><img src="https://img.shields.io/badge/▸_ARQUITETURA-1987F0?style=for-the-badge" alt="arquitetura"/></a>
-<a href="#implementacao"><img src="https://img.shields.io/badge/▸_IMPLEMENTAÇÃO-000000?style=for-the-badge" alt="impl"/></a>
+<a href="#visao-geral"><img src="https://img.shields.io/badge/▸_VISIÓN_GENERAL-1987F0?style=for-the-badge" alt="visao"/></a>
+<a href="#beneficios"><img src="https://img.shields.io/badge/▸_BENEFICIOS-000000?style=for-the-badge" alt="beneficios"/></a>
+<a href="#arquitetura"><img src="https://img.shields.io/badge/▸_ARQUITECTURA-1987F0?style=for-the-badge" alt="arquitetura"/></a>
+<a href="#implementacao"><img src="https://img.shields.io/badge/▸_IMPLEMENTACIÓN-000000?style=for-the-badge" alt="impl"/></a>
 
 </div>
 
 <br/>
 
-> ⚠️ **Repositório em construção** — o guia completo está sendo documentado e publicado por etapas.
+> ⚠️ **Repositorio en construcción** — la guía completa está siendo documentada y publicada por etapas.
 
 <!-- ══════════════════════════ VISÃO GERAL ══════════════════════════ -->
 <a id="visao-geral"></a>
-## Visão Geral
+## Visión General
 
-Este repositório apresenta uma solução completa para montar um **Cyber Range / Laboratório de Segurança** totalmente isolado, rápido, automatizado e monitorado em tempo real.
+Este repositorio presenta una solución completa para montar un **Cyber Range / Laboratorio de Seguridad** totalmente aislado, rápido, automatizado y monitorizado en tiempo real.
 
-O grande diferencial é **eliminar de vez** práticas manuais e inseguras como:
-- Uso constante de `scp`, `sftp` e digitação de senhas
-- Exposição de serviços críticos na rede Wi-Fi principal
-- Falta de visibilidade do próprio servidor de segurança
+El gran diferencial es **eliminar de una vez** prácticas manuales e inseguras como:
+- Uso constante de `scp`, `sftp` y escritura de contraseñas
+- Exposición de servicios críticos en la red Wi-Fi principal
+- Falta de visibilidad del propio servidor de seguridad
 
-Tudo isso é substituído por:
-- Rede **P2P dedicada** (cabo direto ou virtual)
-- Montagem persistente via **SSHFS** + autenticação por chave
-- Monitoramento completo com **Wazuh** (incluindo o próprio Manager)
+Todo esto se sustituye por:
+- Red **P2P dedicada** (cable directo o virtual)
+- Montaje persistente vía **SSHFS** + autenticación por clave
+- Monitorización completa con **Wazuh** (incluyendo el propio Manager)
 
 <div align="center">
   <img src="https://64.media.tumblr.com/f444263be6597f8981d2b9cf3d0c7408/f74decdc69e61f0a-9a/s400x600/a157756e4c56be0e5e51a9e4c79ba781a451e94a.gifv" width="100%" height="2px" alt="divider"/>
@@ -73,13 +73,13 @@ Tudo isso é substituído por:
 
 <!-- ══════════════════════════ BENEFÍCIOS ══════════════════════════ -->
 <a id="beneficios"></a>
-## Benefícios e Problemas Resolvidos
+## Beneficios y Problemas Resueltos
 
-| Problema Antigo | Solução Implementada | Benefício Final |
+| Problema Antiguo | Solución Implementada | Beneficio Final |
 |-----------------|----------------------|-----------------|
-| Exposição de serviços na rede Wi-Fi principal | Link P2P isolado + UFW restritivo | Isolamento total + velocidade máxima + superfície de ataque mínima |
-| Uso constante de `scp`, `sftp` e senhas | SSHFS persistente + chave SSH | Arquivos remotos acessados como se fossem locais |
-| Sem visibilidade do próprio Manager | Wazuh Agent 000 (localhost) + Agent P2P | Monitoramento 100% do ambiente, inclusive do servidor |
+| Exposición de servicios en la red Wi-Fi principal | Enlace P2P aislado + UFW restrictivo | Aislamiento total + velocidad máxima + superficie de ataque mínima |
+| Uso constante de `scp`, `sftp` y contraseñas | SSHFS persistente + clave SSH | Archivos remotos accedidos como si fueran locales |
+| Sin visibilidad del propio Manager | Wazuh Agent 000 (localhost) + Agent P2P | Monitorización 100% del entorno, incluido el servidor |
 
 <div align="center">
   <img src="https://64.media.tumblr.com/f444263be6597f8981d2b9cf3d0c7408/f74decdc69e61f0a-9a/s400x600/a157756e4c56be0e5e51a9e4c79ba781a451e94a.gifv" width="100%" height="2px" alt="divider"/>
@@ -87,19 +87,19 @@ Tudo isso é substituído por:
 
 <!-- ══════════════════════════ ARQUITETURA ══════════════════════════ -->
 <a id="arquitetura"></a>
-## Arquitetura
+## Arquitectura
 
-| Máquina | Função | IP (exemplo) | SO |
+| Máquina | Función | IP (ejemplo) | SO |
 |---------|--------|--------------|----|
-| Servidor (Manager) | Wazuh Manager + Dashboard + ambiente de trabalho | `10.10.10.1` | Kali / Debian |
-| Notebook (Agent) | Máquina do analista / pentester | `10.10.10.2` | Kali / Debian |
+| Servidor (Manager) | Wazuh Manager + Dashboard + entorno de trabajo | `10.10.10.1` | Kali / Debian |
+| Portátil (Agent) | Máquina del analista / pentester | `10.10.10.2` | Kali / Debian |
 
-### Pré-requisitos (já instalados)
-- Wazuh Manager + Dashboard no servidor
-- Wazuh Agent no notebook
-- `sshfs` nas duas máquinas
-- `ufw` ativo no servidor
-- Deskflow / Barrier / Input Leap (para mouse/teclado compartilhado)
+### Requisitos previos (ya instalados)
+- Wazuh Manager + Dashboard en el servidor
+- Wazuh Agent en el portátil
+- `sshfs` en ambas máquinas
+- `ufw` activo en el servidor
+- Deskflow / Barrier / Input Leap (para ratón/teclado compartido)
 
 <div align="center">
   <img src="https://64.media.tumblr.com/f444263be6597f8981d2b9cf3d0c7408/f74decdc69e61f0a-9a/s400x600/a157756e4c56be0e5e51a9e4c79ba781a451e94a.gifv" width="100%" height="2px" alt="divider"/>
@@ -107,16 +107,16 @@ Tudo isso é substituído por:
 
 <!-- ══════════════════════════ IMPLEMENTAÇÃO ══════════════════════════ -->
 <a id="implementacao"></a>
-## Guia de Implementação
+## Guía de Implementación
 
-### Passo 1 — Link Ponto a Ponto (P2P)
+### Paso 1 — Enlace Punto a Punto (P2P)
 
-**No Servidor (`10.10.10.1`)**
+**En el Servidor (`10.10.10.1`)**
 ```bash
 sudo nano /etc/network/interfaces
 ```
 
-Adicione estas linhas ao arquivo:
+Añade estas líneas al archivo:
 ```
 auto eth0
 iface eth0 inet static
@@ -124,7 +124,7 @@ iface eth0 inet static
     netmask 255.255.255.0
 ```
 
-> 🚧 **Próximos passos em breve:** configuração do Agent, SSHFS persistente, regras UFW e integração completa com o Wazuh.
+> 🚧 **Próximos pasos en breve:** configuración del Agent, SSHFS persistente, reglas UFW e integración completa con Wazuh.
 
 <div align="center">
   <img src="https://file.loading.io/color/feature/thumb/Blues-8.png?" width="100%" height="10px" alt="divider"/>
